@@ -1,4 +1,4 @@
-require 'pry' # lignes très pratiques qui appellent les gems du Gemfile. On verra plus tard comment s'en servir ;) - ça évite juste les "require" partout
+#   a # lignes très pratiques qui appellent les gems du Gemfile. On verra plus tard comment s'en servir ;) - ça évite juste les "require" partout
 require 'bundler'
 Bundler.require
 
@@ -17,10 +17,9 @@ while  @dead != true
         puts player2.show_state
         puts "Mais passons maintenant à la phase d'attaque:"
         puts ">"
-        player1.attacks(enemy.name)
-        break if  @@dead = true             #correctif du bug
-        player2.attacks(enemy.name)
-
+        player1.attacks(player2)        
+        player2.attacks(player1)
+        gets                            #Intervention clavier
 end
 
 
@@ -30,7 +29,7 @@ end
 
 
 
-binding.pry
+# binding.pry
 
    #player1 = Player.new("josé")
    #player1.show_state
