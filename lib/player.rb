@@ -17,6 +17,7 @@ attr_accessor :name, :life_points
         if @life_points <= 0
             puts "Le joueur #{@name} a été tué !"               # self.name au lieu de @name
             @dead = true
+            exit
         end                                                 #sinon c'est l'attaquant qui prend !
     end
 
